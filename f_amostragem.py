@@ -2,18 +2,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Parâmetros
-f = 5.0          # Hz  — frequência real do fenómeno
-fa = 50.0        # Hz  — frequência de amostragem (fa >= 2*f para evitar aliasing))
-T = 1 / fa       # intervalo entre amostras (segundos)
+f = 5.0                                             # Hz  — frequência real do fenómeno
+fa = 50.0                                           # Hz  — frequência de amostragem (fa >= 2*f para evitar aliasing))
+T = 1 / fa                                          # intervalo entre amostras (segundos)
 
-duracao = 1.0    # segundos que queremos observar
+duracao = 1.0                                       # segundos que queremos observar
 n = np.arange(0, int(duracao * fa))   # 0, 1, 2, ..., N-1
 
 # Tempo real associado a cada amostra
-t = n * T        # <--- Esta é a linha mais importante da aula!
+t = n * T                                           # t[0] = 0, t[1] = T, t[2] = 2*T, ..., t[N-1] = (N-1)*T
 
-# Sinal amostrado
-sinal = np.sin(2 * np.pi * f * t)
+sinal = np.sin(2 * np.pi * f * t)                   # Sinal amostrado
 
 # Para comparar com o "verdadeiro" contínuo
 t_cont = np.linspace(0, duracao, 1000)
