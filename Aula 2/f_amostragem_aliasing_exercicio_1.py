@@ -2,9 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Parâmetros
-f = 2000.0                                             # Hz  — frequência real do fenómeno
+f = 5.0                                             # Hz  — frequência real do fenómeno
 
-fa = 200000.0                                           # Hz  — frequência de amostragem (fa >= 2*f para evitar aliasing))
+fa = 50.0                                           # Hz  — frequência de amostragem (fa >= 2*f para evitar aliasing))
 T_amostras = 1 / fa                                          # intervalo entre amostras (segundos)
 print(f'T_amostras{T_amostras:.6f} segundos')
 

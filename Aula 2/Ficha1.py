@@ -23,7 +23,7 @@ x_min, x_max = -3, 3  # Amplitude do sinal
 delta = (x_max - x_min) / n_niveis
 x_q = np.round((x - x_min) / delta) * delta + x_min  # Quantização
 
-
+#Representação sianl original e quantizado
 plt.figure(figsize=(10, 5))
 plt.plot(t[:50], x[:50], label="Sinal Original", linestyle="--", alpha=0.7)
 plt.step(t[:50], x_q[:50], label="Sinal Quantizado", where="mid", color = 'r')
@@ -33,3 +33,6 @@ plt.legend()
 plt.title("Quantização")
 plt.grid()
 plt.show()
+
+
+#poderá aumentar o número de bits para 8 bits e comparar os resultados?
